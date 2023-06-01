@@ -1,0 +1,162 @@
+{%extends 'api_user_base.html'%}
+{%block content%}
+                <main>
+                    <div class="container-fluid px-4">
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="{{url_for('api_user.dashboard')}}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Add Application/API Key</li>
+                        </ol>
+
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body"> Total API keys: <h2>{{api_key_count}}</h2></h2></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row">
+
+<!--                            ADD NEW APPLICATION -->
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-plus me-1"></i>
+                                        Add New App
+                                    </div>
+                                     <form method = "POST" action = "{{url_for('api_user.add_application')}}">
+                                   <div class="input-group mb-3 mt-4">
+                                      <span class="input-group-text" id="inputGroup-sizing-default">App Name</span>
+                                      <input type="text" name = "name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    </div>
+
+                                 <div class="input-group mb-3">
+                                         <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                                     <input type="text" name ="description" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                 </div>
+
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-4 mb-4">
+                                      <button class="btn btn-primary" type="submit">Add App</button>
+
+                                    </div>
+                                     </form>
+                                </div>
+
+
+
+
+                            </div>
+
+
+                          <!--ADD API KEY-->
+                            <div class="col-xl-6">
+
+                                  <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-key me-1"></i>
+                                        Add API Key
+                                    </div>
+
+                                     <form method = "POST" action = "{{url_for('api_user.add_api_key')}}">
+
+                                       <div class="input-group mb-3 mt-4">
+                                          <select class="form-select" id="inputGroupSelect01" name="app">
+                                            <option value="none">Select App</option>
+                                              {%for app in apps%}
+                                            <option value="{{app.app_id}}">{{app.name}}</option>
+                                            {%endfor%}
+                                              </select>
+                                       </div>
+
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mr-4 mb-4">
+                                          <button class="btn btn-primary" type="submit">Generate Key</button>
+                                        </div>
+
+                                     </form>
+                                  </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Applications
+                            </div>
+                            <div class="card-body">
+                            <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>App Name</th>
+                                            <th>Date Created</th>
+                                            <th>No of keys</th>
+                                            <th>Last Request Date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                             <th>App Name</th>
+                                            <th>Date Created</th>
+                                            <th>No of keys</th>
+                                            <th>Last Request Date</th>
+
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    {% for r in data%}
+                                        <tr>
+                                            <td>{{r[3].name}}</td>
+                                            <td>{{r[3].date_created}}</td>
+                                            <td>{{r[5]}}</td>
+                                            <td>2022-23-23</td>
+                                        </tr>
+                                    {%endfor%}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+{%endblock%}
+

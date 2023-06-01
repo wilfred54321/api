@@ -1,0 +1,74 @@
+2022-12-27 23:30:56,748] INFO in routes: wilfredowobu@gmail.com logged out
+2022-12-27 23:31:33,640] INFO in routes: User test logged in
+INFO in routes at 2022-12-27 23:35:03,249 ::: Index accessed!
+2022-12-27 23:45:23,308] ERROR in routes: error occured. User owobuwilfred@gmail.com  may already exist
+2022-12-27 23:47:25,789] INFO in routes: user with email user7@email.com  added successfully
+2022-12-27 23:48:36,567] INFO in routes: User user7 logged in
+2022-12-28 00:54:24,845] INFO in routes: user7@email.com logged out
+2022-12-28 00:54:41,342] INFO in routes: User wilfred logged in
+2022-12-28 21:59:04,575] INFO in routes: User wilfred logged in
+2022-12-28 22:14:39,975] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-28 22:15:04,801] INFO in routes: User test logged in
+2022-12-28 23:14:23,186] INFO in routes: User wilfred logged in
+2022-12-28 23:15:15,618] INFO in routes: User wilfred logged in
+2022-12-28 23:16:15,257] INFO in routes: User wilfred logged in
+2022-12-28 23:17:17,327] INFO in routes: User wilfred logged in
+2022-12-28 23:17:25,763] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-28 23:22:57,526] INFO in routes: User wilfred logged in
+2022-12-28 23:23:34,314] INFO in routes: User wilfred logged in
+2022-12-28 23:25:07,374] INFO in routes: User wilfred logged in
+2022-12-28 23:32:10,153] INFO in routes: User wilfred logged in
+2022-12-28 23:33:21,163] INFO in routes: User wilfred logged in
+2022-12-28 23:38:42,656] INFO in routes: User wilfred logged in
+2022-12-28 23:39:52,056] INFO in routes: User wilfred logged in
+2022-12-28 23:41:49,487] INFO in routes: User wilfred logged in
+2022-12-28 23:43:01,249] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-28 23:58:58,673] INFO in routes: User wilfred logged in
+2022-12-29 00:01:38,851] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-29 00:03:37,851] INFO in routes: User wilfred logged in
+2022-12-29 00:03:56,004] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-29 00:04:06,045] INFO in routes: User test logged in
+2022-12-29 00:10:23,619] INFO in routes: User test logged in
+2022-12-29 00:14:13,790] INFO in routes: User test logged in
+2022-12-29 00:15:45,992] INFO in routes: User test logged in
+2022-12-29 00:44:24,537] INFO in routes: User test logged in
+2022-12-29 01:31:55,119] INFO in routes: User wilfred logged in
+2022-12-29 01:33:32,419] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-29 01:33:43,685] INFO in routes: User wilfred logged in
+2022-12-29 01:34:48,327] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-29 01:34:59,186] INFO in routes: User wilfred logged in
+2022-12-29 03:49:12,081] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-29 03:51:04,218] INFO in routes: User wilfred logged in
+2022-12-29 10:32:17,728] INFO in routes: User test logged in
+2022-12-29 11:17:55,703] INFO in routes: User test logged in
+2022-12-29 23:47:53,662] INFO in routes: testuser@email.com logged out
+2022-12-29 23:48:27,879] INFO in routes: User test logged in
+2022-12-30 17:42:57,196] INFO in routes: testuser@email.com logged out
+2022-12-30 17:43:19,811] INFO in routes: User test logged in
+2022-12-30 18:49:34,573] INFO in routes: testuser@email.com logged out
+2022-12-30 18:50:11,374] INFO in routes: user with email testuser2@gmail.com  added successfully
+2022-12-30 18:50:35,037] INFO in routes: User testuser2 logged in
+2022-12-30 19:04:44,434] INFO in routes: User testuser2 logged in
+2022-12-30 19:05:20,637] INFO in routes: testuser2@gmail.com logged out
+2022-12-30 19:06:01,718] ERROR in routes: error occured - user user3@gmail.com  may already exist
+2022-12-30 19:25:02,130] INFO in routes: User test logged in
+2022-12-30 19:35:01,525] INFO in routes: user with email relevance@gmail.com  added successfully
+2022-12-30 19:38:18,302] INFO in routes: user with email test3@email.com  added successfully
+2022-12-30 19:44:36,175] INFO in routes: user with email time@email.com  added successfully
+2022-12-30 19:46:04,259] INFO in routes: user with email wilfredowobu@email.com  added successfully
+2022-12-30 19:48:32,793] INFO in routes: User wilfred logged in
+2022-12-30 19:49:57,114] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-30 19:50:08,304] INFO in routes: User wilfred logged in
+2022-12-30 19:50:56,426] INFO in routes: owobuwilfred@gmail.com logged out
+2022-12-30 19:51:08,755] INFO in routes: User test logged in
+2022-12-30 22:25:38,966] INFO in routes: User test logged in
+2022-12-30 22:52:11,048] INFO in routes: testuser@email.com logged out
+2022-12-30 22:52:25,261] INFO in routes: User wilfred logged in
+2022-12-30 22:54:23,001] INFO in routes: User jane logged in
+2023-01-02 00:18:46,681] INFO in routes: User test logged in
+2023-01-02 00:19:32,834] INFO in routes: User test logged in
+2023-01-02 00:20:04,083] INFO in routes: User test logged in
+2023-01-02 00:20:32,597] INFO in routes: User test logged in
+2023-01-14 10:13:13,473] INFO in routes: User wilfred logged in
+2023-01-31 06:49:58,283] INFO in routes: User wilfred logged in
+2023-01-31 06:51:37,535] INFO in routes: owobuwilfred@gmail.com logged out

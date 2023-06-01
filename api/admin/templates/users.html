@@ -1,0 +1,70 @@
+  {%extends 'admin_base.html'%}
+  {%block content%}
+   <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Users</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="{{url_for('admin.dashboard')}}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Users</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                This table contains all the users that are currently signed up on this system.
+<!--                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the-->
+<!--                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>-->
+<!--                                .-->
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                DataTable Example
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Total Apps</th>
+                                            <th>Total Keys</th>
+                                            <th>Date Joined</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Total Apps</th>
+                                            <th>Total Keys</th>
+                                            <th>Date Joined</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    {% for r in result%}
+                                        <tr>
+                                            <td>{{r[0].firstname}}</td>
+                                            <td>{{r[0].lastname}}</td>
+                                            <td>{{r[0].email}}</td>
+                                            <td>{{r[1].name}}</td>
+                                            <td>{{r[5]}}</td>
+                                            <td>{{r[6]}}</td>
+                                            <td>{{r[0].date_created.strftime('%b %d, %Y')}}</td>
+                                            <td>{{r[2].name}}</td>
+                                        </tr>
+                                    {%endfor%}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+  {%endblock%}

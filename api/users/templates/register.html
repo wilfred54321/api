@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Welcome!</h3>
+
+              <!-- Sign In Form -->
+              <form method = "POST" action = "{{url_for('users.register')}}">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" name = "firstname" placeholder="John">
+                  <label for="floatingInput">First Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput"  name = "lastname" placeholder="Doe">
+                  <label for="floatingInput">Lastname</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" name = "email" placeholder="name@email.com">
+                  <label for="floatingInput">Email Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword"  name = "password" placeholder="password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+
+
+
+                <div class = "form-check mb-3">
+                      <select class="form-select" id="inputGroupSelect01" name="role">
+                        <option value="none">None</option>
+                          {%for role in roles%}
+                        <option value="{{role.role_id}}">{{role.name}}</option>
+                          {%endfor%}
+                      </select>
+                </div>
+
+
+
+
+<!--                 <div class = "form-check mb-3">-->
+<!--                      <select class="form-select" id="inputGroupSelect01" name="flight_category">-->
+<!--                        <option value="none">None</option>-->
+
+<!--                        <option value="admin">admin</option>-->
+<!--                        <option value="api_user">api_user</option>-->
+<!--                        <option value="developer">developer</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+
+
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                  <label class="form-check-label" for="rememberPasswordCheck">
+                    Remember password
+                  </label>
+                </div>
+
+
+                <div class="d-grid">
+                  <button class="btn btn-lg btn-primary btn-login text-capitalize fw-bold mb-2" type="submit">Register</button>
+                  <div class="text-center">
+                    <a class="small" href="#">Forgot password?</a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{%endblock%}
